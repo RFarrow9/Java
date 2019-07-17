@@ -3,8 +3,8 @@ package com.pluralsight.getorganised;
 public class Flight {
     // other members elided for clarity
     //int seats = 150; //Can be hidden
-    private int flightNumber;
-    private char flightClass;
+    private Integer flightNumber;
+    private Character flightClass;
     int passengers = 100;
 
     @Override
@@ -17,6 +17,15 @@ public class Flight {
         return
                 flightNumber == other.flightNumber &&
                         flightClass == other.flightClass;
+    }
+    @Override
+    public String toString() {
+        if(flightNumber != null)
+            return "Flight #" + flightNumber;
+        else if(flightClass != null)
+            return "Flight Class " + flightClass;
+        else
+            return "Flight identity not set";
     }
     int getSeats() {return 150;}
 
