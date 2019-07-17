@@ -1,13 +1,9 @@
 package com.pluralsight.getorganised;
 
-public final class Passenger {
-    private int bags;
+public class Passenger {
+    private int freeBags;
 
-    public Passenger(int bags) {
-        this.bags = bags;
-    }
+    public Passenger(int freeBags) {this.freeBags = freeBags;}
 
-    public Passenger() {
-
-    }
+    public Passenger() {}
 }

@@ -3,6 +3,8 @@ package com.pluralsight.getorganised;
 public class Flight {
     // other members elided for clarity
     //int seats = 150; //Can be hidden
+    static final int MAX_FAA_SEATS = 550;
+    private int seats;
     private Integer flightNumber;
     private Character flightClass;
     int passengers = 100;
@@ -29,6 +31,12 @@ public class Flight {
     }
     int getSeats() {return 150;}
 
+    public void setSeats(int seats) {
+        if(seats <= MAX_FAA_SEATS)
+            this.seats = seats;
+        else
+            System.out.println("Too many seats");
+    }
     public void add1Passenger() {
         if(hasSeating())
             passengers += 1;
